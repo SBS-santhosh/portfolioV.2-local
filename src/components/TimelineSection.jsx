@@ -74,30 +74,34 @@ const VeilleTechSection = () => {
           {
             date: "Janvier 2024",
             title: "Microsoft Power Platform intègre Copilot (IA)",
-            description: "Microsoft a ajouté Copilot à Power Apps pour permettre de générer des applications à partir d'une simple description en langage naturel.",
+            description: "Microsoft permet maintenant de créer des applications en langage naturel grâce à Copilot dans Power Apps.",
             impact: "Révolution de la création d'apps par IA",
-            link: ""
+            example: "Exemple concret : un utilisateur peut écrire 'Créer une appli de suivi de ventes' et l'IA génère la structure de l'application automatiquement.",
+            link: "https://www.microsoft.com/en-us/dynamics-365/blog/business-leader/2024/01/25/2024-release-wave-1-plans-for-microsoft-dynamics-365-and-power-platform-now-available/"
           },
           {
-            date: "Avril 2024",
+            date: "Avril 2021",
             title: "Bubble lève 100 millions de dollars",
-            description: "La plateforme No Code Bubble a levé des fonds pour renforcer ses outils IA et sa sécurité.",
+            description: "Bubble renforce ses outils IA et sa sécurité grâce à cette levée de fonds.",
             impact: "Confiance du marché dans le No Code",
-            link: ""
+            example: "Exemple concret : Bubble peut maintenant améliorer son générateur d'applications sans code pour les startups.",
+            link: "https://www.reuters.com/technology/no-code-startup-bubble-raises-100-mln-in-round-led-by-insight-partners-2021-07-27/"
           },
           {
             date: "Juin 2024",
             title: "Google lance AppSheet AI",
-            description: "Google a intégré l'IA à son outil AppSheet (no code) pour générer automatiquement des workflows à partir de données.",
+            description: "Google AppSheet utilise l'IA pour générer automatiquement des workflows.",
             impact: "Automatisation intelligente des processus",
-            link: ""
+            example: "Exemple concret : en fournissant un tableau de données, AppSheet crée automatiquement un processus d'approbation et notifications.",
+            link: "https://discuss.google.dev/t/announcing-ai-assisted-app-creation-with-gemini-in-appsheet/153205"
           },
           {
             date: "Septembre 2025",
             title: "Adoption dans les écoles",
-            description: "De plus en plus d'écoles de commerce et BTS intègrent des modules 'création d'applications No Code'.",
+            description: "Certaines écoles spécialisées intègrent le No Code dans leurs formations.",
             impact: "Démocratisation de l'enseignement tech",
-            link: ""
+            example: "Exemple concret : Epitech Digital School propose des bootcamps 'Low Code / No Code' pour ses étudiants.",
+            link: "https://www.epitech.digital/lowcode-nocode-epitech-digital-school/?utm_source=chatgpt.com"
           }
         ]
       }
@@ -118,28 +122,28 @@ const VeilleTechSection = () => {
     }
   ];
 
-  const quizQuestions = [
-    {
-      q: "Quelle est la différence entre Low Code et No Code ?",
-      a: "Low Code utilise des blocs visuels avec peu de code, No Code ne nécessite aucun code"
-    },
-    {
-      q: "Cite une plateforme No Code populaire.",
-      a: "Bubble, Glide, Notion, Webflow, ou Make"
-    },
-    {
-      q: "Quel est l'avantage principal du No Code pour les entreprises ?",
-      a: "Rapidité de développement et réduction des coûts"
-    },
-    {
-      q: "Quelle entreprise a intégré Copilot dans son outil Low Code ?",
-      a: "Microsoft (Power Apps)"
-    },
-    {
-      q: "En quelle année Bubble a levé 100 millions de dollars ?",
-      a: "2024 (Avril)"
-    }
-  ];
+const quizQuestions = [
+  {
+    q: "Qu’est-ce que le Low Code ?",
+    a: "Créer des applications avec peu de code."
+  },
+  {
+    q: "Donne un exemple de plateforme Low Code.",
+    a: "Microsoft Power Apps"
+  },
+  {
+    q: "Quel est l’avantage principal du Low Code ?",
+    a: "Développement rapide"
+  },
+  {
+    q: "Le Low Code nécessite-t-il beaucoup de connaissances en programmation ?",
+    a: "Non"
+  },
+  {
+    q: "Le Low Code peut-il être utilisé par les entreprises et les étudiants ?",
+    a: "Oui"
+  }
+];
 
   return (
     <section className="py-16 px-4 relative">
@@ -153,7 +157,7 @@ const VeilleTechSection = () => {
           <p className="text-sm text-muted-foreground">Présentation orale • 8-10 minutes</p>
         </div>
 
-        {/* Timeline Navigation - More Compact */}
+        {/* Timeline Navigation */}
         <div className="relative mb-12">
           <div className="absolute top-6 left-0 right-0 h-0.5 bg-secondary hidden md:block"></div>
           <div 
@@ -363,9 +367,22 @@ const VeilleTechSection = () => {
                         <Calendar className="w-4 h-4 text-primary" />
                         <span className="font-semibold text-sm text-primary">{item.date}</span>
                       </div>
-                      <span className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full">
-                        #{idx + 1}
-                      </span>
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full">
+                          #{idx + 1}
+                        </span>
+                        {item.link && (
+                          <a
+                            href={item.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-1.5 rounded-full bg-primary/10 hover:bg-primary hover:text-primary-foreground text-primary transition-all duration-300"
+                            title="Voir la source"
+                          >
+                            <ExternalLink className="w-3.5 h-3.5" />
+                          </a>
+                        )}
+                      </div>
                     </div>
                     <h4 className="text-base font-semibold mb-2">{item.title}</h4>
                     <p className="text-sm text-muted-foreground mb-3">{item.description}</p>
