@@ -1,2 +1,1 @@
-https://portfolio-v-2-kohl.vercel.app/
-# portfolioV.2-local
+this cod must run in locale 
