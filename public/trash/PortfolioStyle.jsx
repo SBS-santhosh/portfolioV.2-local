@@ -1,3 +1,5 @@
+// if you some how create a new page in this site use this code for the css styles reference so you can adopte it easily
+
 import React, { useState } from 'react';
 import { Copy, Check } from 'lucide-react';
 
