@@ -146,7 +146,7 @@ const quizQuestions = [
 ];
 
   return (
-    <section className="py-16 px-4 relative">
+    <section id="veille-tech" className="py-16 px-4 relative">
       <div className="container mx-auto max-w-6xl">
         {/* Header */}
         <div className="text-center mb-12">
