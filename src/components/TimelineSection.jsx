@@ -320,9 +320,9 @@ export default function VeilleTechSection() {
   };
 
   return (
-    <section id="veille-tech" className="py-16 px-4 bg-background relative">
+    <section id="veille-tech" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-8 md:mb-12">
+        <div className="text-3xl md:text-4xl font-bold mb-4 text-center">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-3">
             Veille Technologique <span className="text-primary">2024-2025</span>
           </h2>
