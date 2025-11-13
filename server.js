@@ -25,11 +25,11 @@ app.post("/api/contact", async (req, res) => {
 
     // Send to yourself
     await transporter.sendMail({
-      from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
+      from: `"Portfolio Contact veille " <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_USER,
       subject: `📬 Message de ${name}`,
       html: `
-        <h3>Nouvelle demande depuis le portfolio</h3>
+        <h3>Nouvelle demande depuis le portfolio veille </h3>
         <p><b>Nom:</b> ${name}</p>
         <p><b>Email:</b> ${email}</p>
         <p><b>Sujet:</b> ${subject}</p>
