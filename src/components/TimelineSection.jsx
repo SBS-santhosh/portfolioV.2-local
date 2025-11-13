@@ -31,7 +31,7 @@ export default function VeilleTechSection() {
         objective: "Accélérer la transformation numérique",
         targets: ["PME", "Startups", "Services internes", "Étudiants"],
         platforms: {
-          lowCode: ["Mendix", "OutSystems", "Microsoft Power Apps"],
+          lowCode: ["Mendix", "OutSystems", "Microsoft Power Apps", "Cursor"],
           noCode: ["Bubble", "Glide", "Notion", "Webflow", "Make"]
         },
         advantages: ["Rapidité de développement", "Accessibilité", "Réduction des coûts"],
