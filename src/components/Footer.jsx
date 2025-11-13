@@ -6,7 +6,7 @@ export const Footer = () => {
       {" "}
       <p className="text-sm text-muted-foreground">
         {" "}
-        &copy; {new Date().getFullYear()} Totech.co. All rights reserved.
+        &copy; {new Date().getFullYear()} Totech.co. All rights reserved. still in development if ypu have any issues or suggestions please contact us at 
       </p>
       <a
         href="#hero"
