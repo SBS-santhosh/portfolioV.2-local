@@ -32,8 +32,7 @@ export default function VeilleTechSection() {
         targets: ["PME", "Startups", "Services internes", "Étudiants"],
         platforms: {
           lowCode: ["Mendix", "OutSystems", "Microsoft Power Apps", "Cursor"],
-          noCode: ["Bubble", "Glide", "Notion", "Webflow", "Make"]
-        },
+          noCode: ["Bubble", "Glide", "Notion", "Webflow", "Make"]},
         advantages: ["Rapidité de développement", "Accessibilité", "Réduction des coûts"],
         limits: ["Moins de flexibilité", "Sécurité et maintenance complexes"]
       }
@@ -411,7 +410,7 @@ export default function VeilleTechSection() {
                 <div className="bg-muted/50 p-3 md:p-4 rounded-lg border border-border">
                   <h4 className="font-semibold text-xs md:text-sm mb-2 flex items-center gap-1">
                     <Users className="w-4 h-4 text-primary" />
-                    Cibles
+                    Cibles Destiné.
                   </h4>
                   <div className="flex flex-wrap gap-1">
                     {sections[1].content.targets.map((target, index) => (
